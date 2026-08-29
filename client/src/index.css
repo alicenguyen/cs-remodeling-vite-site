@@ -28,6 +28,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keeps anchor-linked sections from being tucked under the sticky header. */
+section[id] {
+  scroll-margin-top: 140px;
+}
+
 body {
   margin: 0;
   background: var(--bg);

@@ -1,38 +1,51 @@
-import kitchenBath from "../assets/illustrations/services/kitchen-bath-blueprint.png";
-import decksBalconies from "../assets/illustrations/services/decks-balconies-blueprint.png";
-import interiorRemodeling from "../assets/illustrations/services/interior-remodeling-blueprint.png";
+import Carousel from "./Carousel";
+import bathroom1 from "../assets/projects/bathroom1.jpg";
+import bathroom2 from "../assets/projects/bathroom2.jpg";
+import decks1 from "../assets/projects/decks1.jpg";
+import decks2 from "../assets/projects/decks2.jpg";
+import decks3 from "../assets/projects/decks3.jpg";
+import decks4 from "../assets/projects/decks4.jpg";
+import decks5 from "../assets/projects/decks5.jpg";
+import decks6 from "../assets/projects/decks6.jpg";
+import fencing1 from "../assets/projects/fencing1.jpg";
+import kitchen1 from "../assets/projects/kitchen1.jpg";
+import kitchen2 from "../assets/projects/kitchen2.jpg";
+import laundryroom1 from "../assets/projects/laundryroom1.jpg";
+import powderroom1 from "../assets/projects/powderroom1.jpg";
 import "./Projects.css";
 
-const CATEGORIES = [
-  { image: kitchenBath, title: "Kitchen & Bath Remodels" },
-  { image: decksBalconies, title: "Decks & Balconies" },
-  { image: interiorRemodeling, title: "Interior Remodeling" },
+const SLIDES = [
+  { src: kitchen2, category: "Kitchen & Bath", caption: "Finished kitchen remodel with quartz counters" },
+  { src: bathroom1, category: "Kitchen & Bath", caption: "Frameless glass shower with mosaic marble tile" },
+  { src: bathroom2, category: "Kitchen & Bath", caption: "Freestanding soaking tub with a garden view" },
+  { src: powderroom1, category: "Kitchen & Bath", caption: "Powder room remodel" },
+  { src: kitchen1, category: "Kitchen & Bath", caption: "Kitchen remodel in progress" },
+  { src: decks1, category: "Decks & Balconies", caption: "Elevated deck rebuild — before & after" },
+  { src: decks2, category: "Decks & Balconies", caption: "Elevated deck rebuild, structural detail" },
+  { src: decks3, category: "Decks & Balconies", caption: "New elevated deck and stair rebuild" },
+  { src: decks4, category: "Decks & Balconies", caption: "New elevated deck with lattice skirting" },
+  { src: decks5, category: "Decks & Balconies", caption: "Composite balcony deck with metal railing" },
+  { src: decks6, category: "Decks & Balconies", caption: "Redwood deck build and refinish" },
+  { src: fencing1, category: "Repairs & Improvements", caption: "New cedar fence" },
+  { src: laundryroom1, category: "Interior Remodeling", caption: "Laundry room refresh" },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="projects">
-      <div className="container">
-        <span className="section-eyebrow">Recent Work</span>
-        <h2>Projects</h2>
-        <hr className="rule" />
-        <p className="projects-intro">
-          Project photos are added as jobs wrap up. In the meantime, browse the categories below
-          or reach out for references from recent Poway-area clients.
-        </p>
+      <div className="container projects-layout">
+        <div className="projects-intro-col">
+          <span className="section-eyebrow">Recent Work</span>
+          <h2>Projects</h2>
+          <hr className="rule" />
+          <p className="projects-intro">
+            A look at recent kitchens, baths, decks, and interior work from around Poway and San
+            Diego. Reach out if you'd like references for any of these.
+          </p>
+        </div>
 
-        <div className="projects-grid">
-          {CATEGORIES.map((cat) => (
-            <a className="project-card" href="#contact" key={cat.title}>
-              <div className="project-card-media">
-                <img src={cat.image} alt={`${cat.title} example illustration`} />
-              </div>
-              <div className="project-card-copy">
-                <h3>{cat.title}</h3>
-                <span className="project-card-link">Ask about this project type →</span>
-              </div>
-            </a>
-          ))}
+        <div className="projects-carousel-col">
+          <Carousel slides={SLIDES} />
         </div>
       </div>
     </section>
