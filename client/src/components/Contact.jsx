@@ -64,7 +64,7 @@ export default function Contact() {
             <li>
               <MailIcon />
               {/* TODO: replace with the real business email */}
-              <a href="mailto:info@example.com">info@example.com</a>
+              <a href="mailto:shevcouch@icloud.com">shevcouch@icloud.com</a>
             </li>
             <li>
               <PinIcon />
