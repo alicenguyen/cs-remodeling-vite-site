@@ -1,0 +1,158 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+}
+
+.topbar {
+  background: var(--navy-950);
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 38px;
+}
+
+.topbar-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f2efe6;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+
+.topbar-phone:hover {
+  color: var(--gold);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  /*border-bottom: 1px solid var(--line);*/
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  height: 64px;
+  width: 64px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 0.98rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding-bottom: 8px;
+  /*border-bottom: 2px solid transparent;*/
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.main-nav a:hover {
+  border-color: var(--gold);
+  color: #f2efe6;
+}
+
+.nav-contact {
+  padding: 10px 22px;
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background: var(--ink);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .brand-logo {
+    height: 48px;
+    width: 48px;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    /*border-bottom: 1px solid var(--line);*/
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 24px 26px;
+    gap: 18px;
+    display: none;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .nav-contact {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

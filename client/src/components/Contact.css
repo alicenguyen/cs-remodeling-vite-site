@@ -1,0 +1,147 @@
+.contact {
+  padding: 84px 0;
+  background: var(--navy-950);
+  color: #f0efe7;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+}
+
+.contact-info h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin-top: 4px;
+}
+
+.contact-info .section-eyebrow {
+  color: var(--gold);
+}
+
+.contact-info p {
+  color: #c8cedb;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  max-width: 42ch;
+}
+
+.contact-details {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.contact-details li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #f0efe7;
+}
+
+.contact-details a:hover {
+  color: var(--gold);
+}
+
+.contact-form {
+  background: var(--paper);
+  border-radius: 8px;
+  padding: 34px;
+  display: grid;
+  gap: 18px;
+  color: var(--text);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-row-split > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+input,
+textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 11px 13px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--navy-700);
+  outline-offset: 1px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.contact-form .btn {
+  margin-top: 6px;
+  justify-self: start;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-status-success {
+  color: var(--green);
+}
+
+.form-status-error {
+  color: #b3261e;
+}
+
+@media (max-width: 980px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact {
+    padding: 56px 0;
+  }
+
+  .contact-form {
+    padding: 24px;
+  }
+
+  .form-row-split {
+    grid-template-columns: 1fr;
+  }
+}
