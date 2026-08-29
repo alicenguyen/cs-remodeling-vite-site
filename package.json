@@ -2,15 +2,22 @@
   "name": "cs-remodeling-website",
   "version": "1.0.0",
   "private": true,
-  "description": "C&S Remodeling marketing site (React + Vite client, Express server)",
+  "description": "C&S Remodeling marketing site (React + Vite client, Express server, Cloudflare Worker)",
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
-    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "install:all": "npm install",
     "dev": "concurrently -n server,client -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
     "build": "npm run build --prefix client",
-    "start": "npm run build && npm run start --prefix server"
+    "start": "npm run build && npm run start --prefix server",
+    "cf:dev": "npm run build && wrangler dev",
+    "deploy": "wrangler deploy"
   },
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^10.0.5"
+    "concurrently": "^10.0.5",
+    "wrangler": "^4.127.1"
   }
 }

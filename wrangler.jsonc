@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cs-remodeling-vite-site",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-08-29",
+  "assets": {
+    "directory": "./client/dist",
+    "binding": "ASSETS"
+  }
+}
