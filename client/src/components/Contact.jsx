@@ -2,6 +2,9 @@ import { useState } from "react";
 import { PhoneIcon, MailIcon, PinIcon } from "./icons";
 import "./Contact.css";
 
+// Toggle back on once the contact form has somewhere real to send leads.
+const SHOW_CONTACT_FORM = false;
+
 const INITIAL_FORM = { name: "", email: "", phone: "", message: "" };
 
 export default function Contact() {
@@ -42,13 +45,15 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact">
-      <div className="container contact-grid">
+      <div className={`container contact-grid ${SHOW_CONTACT_FORM ? "" : "contact-grid-solo"}`}>
         <div className="contact-info">
           <span className="section-eyebrow">Get In Touch</span>
-          <h2>Request a Free Estimate</h2>
+          <h2>{SHOW_CONTACT_FORM ? "Request a Free Estimate" : "Get In Touch"}</h2>
           <hr className="rule" />
           <p>
-            Tell us a bit about your project and we'll get back to you to schedule a walkthrough.
+            {SHOW_CONTACT_FORM
+              ? "Tell us a bit about your project and we'll get back to you to schedule a walkthrough."
+              : "Give us a call or send an email and we'll get back to you to schedule a walkthrough."}
           </p>
 
           <ul className="contact-details">
@@ -68,6 +73,7 @@ export default function Contact() {
           </ul>
         </div>
 
+        {SHOW_CONTACT_FORM && (
         <form className="contact-form" onSubmit={handleSubmit} noValidate>
           <div className="form-row">
             <label htmlFor="name">Name</label>
@@ -135,6 +141,7 @@ export default function Contact() {
             </p>
           )}
         </form>
+        )}
       </div>
     </section>
   );

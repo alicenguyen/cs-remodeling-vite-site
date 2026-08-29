@@ -10,6 +10,20 @@
   gap: 56px;
 }
 
+.contact-grid-solo {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+.contact-grid-solo .contact-info p {
+  max-width: 46ch;
+}
+
+.contact-grid-solo .contact-details {
+  justify-items: center;
+}
+
 .contact-info h2 {
   color: #fff;
   font-size: 2.2rem;
