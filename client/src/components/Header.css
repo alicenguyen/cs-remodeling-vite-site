@@ -87,7 +87,7 @@
 
 .main-nav a:hover {
   border-color: var(--gold);
-  color: #f2efe6;
+  color: var(--gold);
 }
 
 .nav-contact {
