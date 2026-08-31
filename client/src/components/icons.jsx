@@ -6,13 +6,22 @@ export function PhoneIcon(props) {
   );
 }
 
+const FLAG_STRIPE_H = 16 / 13;
+const FLAG_RED_STRIPES = [0, 2, 4, 6, 8, 10, 12];
+const FLAG_STAR_COLS = [2.4, 5.2, 8, 10.8];
+const FLAG_STAR_ROWS = [2, 4.3, 6.6, 9];
+
 export function VeteranIcon(props) {
   return (
-    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" {...props}>
-      <circle cx="12" cy="12" r="10.5" fill="#12294a" />
-      <circle cx="12" cy="12" r="8.6" fill="#fff" opacity="0.08" />
-      <path d="M6 8.2h12v1.7l-5 6.9h-2l-5-6.9V8.2z" fill="#e7e2d3" opacity="0.9" />
-      <path d="M6 8.2h4.2v8.6H8.6l-2.6-4V8.2z" fill="#c0392b" opacity="0.85" />
+    <svg viewBox="0 0 30 16" width="30" height="16" aria-hidden="true" {...props}>
+      <rect width="30" height="16" fill="#fff" />
+      {FLAG_RED_STRIPES.map((i) => (
+        <rect key={i} x="0" y={i * FLAG_STRIPE_H} width="30" height={FLAG_STRIPE_H + 0.1} fill="#b22234" />
+      ))}
+      <rect x="0" y="0" width="13" height={FLAG_STRIPE_H * 7} fill="#3c3b6e" />
+      {FLAG_STAR_ROWS.map((cy) =>
+        FLAG_STAR_COLS.map((cx) => <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="0.55" fill="#fff" />),
+      )}
     </svg>
   );
 }
