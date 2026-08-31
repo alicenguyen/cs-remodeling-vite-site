@@ -11,6 +11,14 @@ const FEATURED_REVIEWS = [
     bizUrl: "https://www.yelp.com/biz/USxvR4SCi_4AjDIUYtQ0Rw",
     bizReviewUrl: "https://www.yelp.com/biz/c-and-s-remodeling-poway-2?hrid=o1SwJwZKOwi6CQhdy6jwaQ",
   },
+  {
+    reviewId: "97xJEdGiRlBjtZ7K9k_Y0g",
+    reviewerName: "V K.",
+    reviewerUrl: "https://www.yelp.com/user_details?userid=gWmcnc_mJI7tdtu-pTZd3A",
+    bizName: "C&S Remodeling",
+    bizUrl: "https://www.yelp.com/biz/USxvR4SCi_4AjDIUYtQ0Rw",
+    bizReviewUrl: "https://www.yelp.com/biz/c-and-s-remodeling-poway-2?hrid=97xJEdGiRlBjtZ7K9k_Y0g",
+  },
 ];
 
 const HIGHLIGHTS = [
