@@ -1,13 +1,6 @@
 import { StarIcon, HeartIcon, VeteranIcon } from "./icons";
-import StarRating from "./StarRating";
 import YelpReviewEmbed from "./YelpReviewEmbed";
 import "./Reviews.css";
-
-const YELP = {
-  url: "https://www.yelp.com/biz/c-and-s-remodeling-poway-2",
-  rating: 4.6,
-  reviewCount: 9,
-};
 
 const FEATURED_REVIEWS = [
   {
@@ -52,16 +45,6 @@ export default function Reviews() {
           Word of mouth is how most of our clients find us. Here's what that reputation is built
           on.
         </p>
-
-        <a className="yelp-feature" href={YELP.url} target="_blank" rel="noopener noreferrer">
-          <span className="yelp-feature-brand">Yelp</span>
-          <span className="yelp-feature-rating">
-            <StarRating rating={YELP.rating} size={22} />
-            <span className="yelp-feature-number">{YELP.rating.toFixed(1)}</span>
-          </span>
-          <span className="yelp-feature-count">{YELP.reviewCount} reviews</span>
-          <span className="yelp-feature-link">Read our reviews on Yelp →</span>
-        </a>
 
         <div className="yelp-embeds">
           {FEATURED_REVIEWS.map((review) => (
