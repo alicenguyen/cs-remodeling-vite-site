@@ -14,8 +14,60 @@
   margin: 18px 0 0;
 }
 
+.yelp-feature {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid #d32323;
+  border-radius: 6px;
+  padding: 24px 28px;
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.yelp-feature:hover {
+  box-shadow: 0 8px 24px rgba(16, 35, 63, 0.1);
+  transform: translateY(-2px);
+}
+
+.yelp-feature-brand {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #d32323;
+}
+
+.yelp-feature-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yelp-feature-number {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.yelp-feature-count {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.yelp-feature-link {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--gold-dark);
+  white-space: nowrap;
+}
+
 .reviews-grid {
-  margin-top: 48px;
+  margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
@@ -91,6 +143,16 @@
 @media (max-width: 560px) {
   .reviews {
     padding: 56px 0;
+  }
+
+  .yelp-feature {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .yelp-feature-link {
+    margin-left: 0;
   }
 
   .reviews-cta {

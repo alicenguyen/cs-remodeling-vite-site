@@ -1,5 +1,12 @@
 import { StarIcon, HeartIcon, VeteranIcon } from "./icons";
+import StarRating from "./StarRating";
 import "./Reviews.css";
+
+const YELP = {
+  url: "https://www.yelp.com/biz/c-and-s-remodeling-poway-2",
+  rating: 4.6,
+  reviewCount: 9,
+};
 
 const HIGHLIGHTS = [
   {
@@ -34,6 +41,16 @@ export default function Reviews() {
           on.
         </p>
 
+        <a className="yelp-feature" href={YELP.url} target="_blank" rel="noopener noreferrer">
+          <span className="yelp-feature-brand">Yelp</span>
+          <span className="yelp-feature-rating">
+            <StarRating rating={YELP.rating} size={22} />
+            <span className="yelp-feature-number">{YELP.rating.toFixed(1)}</span>
+          </span>
+          <span className="yelp-feature-count">{YELP.reviewCount} reviews</span>
+          <span className="yelp-feature-link">Read our reviews on Yelp →</span>
+        </a>
+
         <div className="reviews-grid">
           {HIGHLIGHTS.map((item) => {
             const content = (
@@ -63,7 +80,7 @@ export default function Reviews() {
         </div>
 
         <div className="reviews-cta">
-          <p>Worked with us recently? We'd love to hear about it — find us on Nextdoor or send us a note.</p>
+          <p>Worked with us recently? We'd love to hear about it — find us on Yelp or Nextdoor, or send us a note.</p>
           <a className="btn btn-outline" href="#contact">
             Get In Touch
           </a>
