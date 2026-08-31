@@ -66,6 +66,35 @@
   white-space: nowrap;
 }
 
+.yelp-embeds {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.yelp-embed-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 20px 22px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  /* Yelp's embedded review iframe has a 320px min-width; scroll instead
+     of overflowing the page on narrower screens. */
+  overflow-x: auto;
+}
+
+.yelp-embed-card a {
+  color: var(--navy-700);
+  font-weight: 600;
+}
+
+.yelp-embed-card a:hover {
+  color: var(--gold-dark);
+}
+
 .reviews-grid {
   margin-top: 28px;
   display: grid;
@@ -153,6 +182,10 @@
 
   .yelp-feature-link {
     margin-left: 0;
+  }
+
+  .yelp-embed-card {
+    padding: 12px;
   }
 
   .reviews-cta {

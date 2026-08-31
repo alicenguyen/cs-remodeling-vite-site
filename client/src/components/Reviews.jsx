@@ -1,5 +1,6 @@
 import { StarIcon, HeartIcon, VeteranIcon } from "./icons";
 import StarRating from "./StarRating";
+import YelpReviewEmbed from "./YelpReviewEmbed";
 import "./Reviews.css";
 
 const YELP = {
@@ -7,6 +8,17 @@ const YELP = {
   rating: 4.6,
   reviewCount: 9,
 };
+
+const FEATURED_REVIEWS = [
+  {
+    reviewId: "o1SwJwZKOwi6CQhdy6jwaQ",
+    reviewerName: "Long N.",
+    reviewerUrl: "https://www.yelp.com/user_details?userid=Wg3seyxdOMRvttgTIlCZNw",
+    bizName: "C&S Remodeling",
+    bizUrl: "https://www.yelp.com/biz/USxvR4SCi_4AjDIUYtQ0Rw",
+    bizReviewUrl: "https://www.yelp.com/biz/c-and-s-remodeling-poway-2?hrid=o1SwJwZKOwi6CQhdy6jwaQ",
+  },
+];
 
 const HIGHLIGHTS = [
   {
@@ -50,6 +62,14 @@ export default function Reviews() {
           <span className="yelp-feature-count">{YELP.reviewCount} reviews</span>
           <span className="yelp-feature-link">Read our reviews on Yelp →</span>
         </a>
+
+        <div className="yelp-embeds">
+          {FEATURED_REVIEWS.map((review) => (
+            <div className="yelp-embed-card" key={review.reviewId}>
+              <YelpReviewEmbed {...review} />
+            </div>
+          ))}
+        </div>
 
         <div className="reviews-grid">
           {HIGHLIGHTS.map((item) => {
