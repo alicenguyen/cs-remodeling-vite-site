@@ -10,6 +10,8 @@ import decks6 from "../assets/projects/decks6.jpg";
 import fencing1 from "../assets/projects/fencing1.jpg";
 import kitchen1 from "../assets/projects/kitchen1.jpg";
 import kitchen2 from "../assets/projects/kitchen2.jpg";
+import kitchen3 from "../assets/projects/kitchen3.jpg";
+import kitchen4 from "../assets/projects/kitchen4.jpg";
 import laundryroom1 from "../assets/projects/laundryroom1.jpg";
 import powderroom1 from "../assets/projects/powderroom1.jpg";
 import "./Projects.css";
@@ -20,6 +22,8 @@ const SLIDES = [
   { src: bathroom2, category: "Kitchen & Bath", caption: "Freestanding soaking tub with a garden view" },
   { src: powderroom1, category: "Kitchen & Bath", caption: "Powder room remodel" },
   { src: kitchen1, category: "Kitchen & Bath", caption: "Kitchen remodel in progress" },
+  { src: kitchen3, category: "Kitchen & Bath", caption: "Finished kitchen with waterfall island opening to the great room" },
+  { src: kitchen4, category: "Kitchen & Bath", caption: "Finished kitchen with stacked wall ovens and subway tile backsplash" },
   { src: decks1, category: "Decks & Balconies", caption: "Elevated deck rebuild — before & after" },
   { src: decks2, category: "Decks & Balconies", caption: "Elevated deck rebuild, structural detail" },
   { src: decks3, category: "Decks & Balconies", caption: "New elevated deck and stair rebuild" },
